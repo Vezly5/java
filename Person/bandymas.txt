@@ -1,0 +1,5 @@
+Person(Blalala,PavardA,20)
+Person(Lalala,PavardC,3)
+Person(Tadas,PavardC,5)
+Person(VardaA,PavardC,4)
+Person(VardaB,PavardC,2)

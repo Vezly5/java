@@ -1,0 +1,6 @@
+Person(Jonas,PavardC,3)
+Person(VardaB,PavardC,2)
+Person(Tadas,PavardC,5)
+Person(VardaA,PavardC,4)
+Person(VardaA,PavardA,20)
+Person(Bandymas,Pridetas,20)
