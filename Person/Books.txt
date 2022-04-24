@@ -38,3 +38,83 @@ Detektyvas
 Autorius PavardeC
 E istorija
 Detektyvas
+2000
+Autorius PavardeA
+Gera istorija
+Drama
+2001
+Autorius PavardeA
+Gera istorija2
+Drama
+2002
+Tadas PavardeC
+Gera istorija3
+Drama
+2003
+Kitastadas PavardeD
+Bloga istorija
+Drama
+2004
+Tadas PavardeC
+seip istorija
+Fantastika
+2005
+Autorius PavardeB
+A istorija
+Fantastika
+2006
+Autorius PavardeB
+B istorija
+Fantastika
+2007
+Autorius PavardeB
+C istorija
+Detektyvas
+2008
+Autorius PavardeC
+D istorija
+Detektyvas
+2020
+Autorius PavardeC
+E istorija
+Detektyvas
+2000
+Autorius PavardeA
+Gera istorija
+Drama
+2001
+Autorius PavardeA
+Gera istorija2
+Drama
+2002
+Tadas PavardeC
+Gera istorija3
+Drama
+2003
+Kitastadas PavardeD
+Bloga istorija
+Drama
+2004
+Tadas PavardeC
+seip istorija
+Fantastika
+2005
+Autorius PavardeB
+A istorija
+Fantastika
+2006
+Autorius PavardeB
+B istorija
+Fantastika
+2007
+Autorius PavardeB
+C istorija
+Detektyvas
+2008
+Autorius PavardeC
+D istorija
+Detektyvas
+2020
+Autorius PavardeC
+E istorija
+Detektyvas

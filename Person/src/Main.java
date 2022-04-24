@@ -9,66 +9,77 @@ public class Main {
 
         try {
             ArrayList<Person> PersonList = new ArrayList<>();
-            PersonList.add(new Person("Jonas", "PavardC",3));
-            PersonList.add(new Person("VardaB", "PavardC",2));
-            PersonList.add(new Person("Tadas", "PavardC",5));
-            PersonList.add(new Person("VardaA", "PavardC",4));
-            PersonList.add(new Person("VardaA", "PavardA",20));
+            PersonList.add(new Person("Jonas", "PavardC", 3));
+            PersonList.add(new Person("VardaB", "PavardC", 2));
+            PersonList.add(new Person("Tadas", "PavardC", 5));
+            PersonList.add(new Person("VardaA", "PavardC", 4));
+            PersonList.add(new Person("VardaA", "PavardA", 20));
 
             dataFile failas = new dataFile("Readers.txt");
             failas.save(PersonList);
-            ArrayList newPersonList =  failas.loadPerson();
-            newPersonList.add(new Person("Bandymas", "Pridetas",20));
+            ArrayList newPersonList = failas.loadPerson();
+            newPersonList.add(new Person("Bandymas", "Pridetas", 20));
             failas.save(newPersonList);
 
-            ArrayList<Person> newbandymasList =  new ArrayList<>();
-                newbandymasList = failas.loadPerson();
+            ArrayList<Person> newbandymasList = new ArrayList<>();
+            newbandymasList = failas.loadPerson();
 
-            for (int i = 0; i < newbandymasList.size(); ++i) {
-                System.out.println(newbandymasList.get(i).getFirstName());
-                System.out.println(newbandymasList.get(i).getLastName());
-                System.out.println(newbandymasList.get(i).getAge());
-            }
+//            for (int i = 0; i < newbandymasList.size(); ++i) {
+//                System.out.println(newbandymasList.get(i).getFirstName());
+//                System.out.println(newbandymasList.get(i).getLastName());
+//                System.out.println(newbandymasList.get(i).getAge());
+//            }
 
 
+
+//            BookList.add(new Book(2000, "Autorius PavardeA","Gera istorija","Drama"));
 
             ArrayList<Book> BookList = new ArrayList<>();
-            BookList.add(new Book(2000, "Autorius PavardeA","Gera istorija","Drama"));
-            BookList.add(new Book(2001, "Autorius PavardeA","Gera istorija2","Drama"));
-            BookList.add(new Book(2002, "Tadas PavardeC","Gera istorija3","Drama"));
-            BookList.add(new Book(2003, "Kitastadas PavardeD","Bloga istorija","Drama"));
-            BookList.add(new Book(2004, "Tadas PavardeC","seip istorija","Fantastika"));
-            BookList.add(new Book(2005, "Autorius PavardeB","A istorija","Fantastika"));
-            BookList.add(new Book(2006, "Autorius PavardeB","B istorija","Fantastika"));
-            BookList.add(new Book(2007, "Autorius PavardeB","C istorija","Detektyvas"));
-            BookList.add(new Book(2008, "Autorius PavardeC","D istorija","Detektyvas"));
-            BookList.add(new Book(2020, "Autorius PavardeC","E istorija","Detektyvas"));
-
             dataFile Knygufailas = new dataFile("Books.txt");
-            Knygufailas.SaveBooks(BookList);
-            ArrayList<Book> newBookList = Knygufailas.loadBooks();
+            BookList = Knygufailas.loadBooks();
 
-            for (int i = 0; i < newBookList.size(); ++i) {
-                System.out.println(newBookList.get(i).getYear());
-                System.out.println(newBookList.get(i).getAuthor());
-                System.out.println(newBookList.get(i).getGenre());
+            ArrayList<Book> TakenBookList = new ArrayList<>();
+            dataFile TakenFile = new dataFile("TakenBooks.txt");
+            TakenBookList = TakenFile.loadTakenBooks();
+
+
+
+
+            Author Autorius = new Author("Autorius", "PavardeB", 20);
+
+
+            System.out.println("====================VISOS KNYGOS======================");
+            for (int i = 0; i < BookList.size(); ++i) {
+                System.out.println(i + "," + BookList.get(i).getYear() + "," + BookList.get(i).getAuthor() + "," + BookList.get(i).getGenre() + "," + BookList.get(i).getTitle());
+//
+            }
+            BookList.removeAll(TakenBookList);
+                System.out.println("====================AVAIABLE KNYGOS======================");
+            for (int i = 0; i < BookList.size(); ++i) {
+                System.out.println(i + "," + BookList.get(i).getYear() + "," + BookList.get(i).getAuthor() + "," + BookList.get(i).getGenre() + "," + BookList.get(i).getTitle());
+               }
+           ArrayList test = Library.availableBooks();
+            System.out.println("====================Test KNYGOS======================");
+            for (int i = 0; i < test.size(); ++i) {
+                System.out.println(i + "," + test.get(i).toString());
             }
 
-            Author Autorius = new Author("Autorius","PavardeB",20);
-            System.out.println(Autorius.getFirstName()+" "+Autorius.getLastName());
-            System.out.println(newBookList.get(5).getAuthor());
-            System.out.println(newBookList.get(6).getAuthor());
-
-            ArrayList<Book> PavarbeBKnygos = Autorius.WrittenBooks(newBookList);
-            System.out.println("================================================");
-            for (int i = 0; i < PavarbeBKnygos.size(); ++i) {
-                System.out.println(PavarbeBKnygos.get(i).getYear());
-                System.out.println(PavarbeBKnygos.get(i).getAuthor());
-                System.out.println(PavarbeBKnygos.get(i).getGenre());
-                System.out.println(PavarbeBKnygos.get(i).getTitle());
-            }
 
 
+
+
+//            Reader Jonas = new Reader("Jonas","Mazylis");
+//            dataFile HistoryFailas = new dataFile("./History.txt");
+//            HistoryFailas.saveHistory(newBookList.get(1),Jonas);
+//            HistoryFailas.saveHistory(newBookList.get(2),Jonas);
+//            HistoryFailas.saveHistory(newBookList.get(3),Jonas);
+//            HistoryFailas.saveHistory(newBookList.get(4),Jonas);
+//
+//           ArrayList <Book> JonoKnygos =  HistoryFailas.loadHistory(Jonas);
+//            for (int i = 0; i < JonoKnygos.size(); ++i) {
+//                System.out.println(Jonas.getFirstName()+" Skaite "+","+JonoKnygos.get(i).getYear()+","+JonoKnygos.get(i).getAuthor()+","+JonoKnygos.get(i).getGenre()+","+JonoKnygos.get(i).getTitle());
+//
+//            }
 
 
 //            System.out.println("===================");
@@ -93,7 +104,6 @@ public class Main {
 //            System.out.println(AmazingLibrary.toString());
 
 
-
 //            int lastNameCheck =   PersonList.get(1).getLastName().compareToIgnoreCase(PersonList.get(2).getLastName());
 //            int firstNameCheck =  PersonList.get(1).getFirstName().compareToIgnoreCase(PersonList.get(2).getFirstName());
 //            int age1 = PersonList.get(1).getAge();
@@ -104,10 +114,10 @@ public class Main {
 //            System.out.println(firstNameCheck);
 //            System.out.println(ageCheck);
 
-        } catch (InputMismatchException e ) {
-            System.out.print(" Neteisingai ivesta");
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }}
+            } catch(InputMismatchException e ){
+                System.out.print(" Neteisingai ivesta");
+            } catch(Exception e){
+                e.printStackTrace();
+            }
+        }}
 
